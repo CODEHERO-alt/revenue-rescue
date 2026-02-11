@@ -1,41 +1,40 @@
-import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const leaks = [
   {
-    symptom: "Checkout loads but payment intent silently fails",
-    cause: "Stripe webhook misconfiguration or client-side error swallowed",
-    impact: "User never retries — lost buyers every day",
+    symptom: "Users sign up but never reach first value moment",
+    cause: "Empty state after signup provides no direction",
+    impact: "Activation rate drops below 30%",
   },
   {
-    symptom: "Pricing page causes hesitation",
-    cause: "Unclear value anchoring or missing social proof at decision point",
+    symptom: "Pricing page creates hesitation before decision",
+    cause: "Unclear value anchoring at the decision point",
     impact: "Demo requests drop 20–40%",
   },
   {
-    symptom: "Mobile users scroll past CTA",
-    cause: "Visual hierarchy conflict — CTA competes with surrounding content",
+    symptom: "Mobile users never see the primary action",
+    cause: "CTA sits below fold or competes with surrounding content",
     impact: "30–50% of mobile traffic never engages",
   },
   {
-    symptom: "Users activate trial but never discover core feature",
-    cause: "Onboarding sequence skips activation milestone",
+    symptom: "Returning users restart onboarding each session",
+    cause: "Session or state persistence failure",
+    impact: "Repeat visitors treated as new — trust lost",
+  },
+  {
+    symptom: "Trial users activate but do not adopt core feature",
+    cause: "Onboarding skips the activation milestone",
     impact: "Churn within 48 hours",
   },
   {
-    symptom: "Returning visitors restart onboarding each session",
-    cause: "State persistence failure or cookie/session misconfiguration",
-    impact: "Repeat visitors treated as new — trust eroded",
+    symptom: "Checkout silently fails and users leave",
+    cause: "Payment intent error swallowed on client side",
+    impact: "Lost buyers every day — undetected",
   },
   {
-    symptom: "Integration docs opened but users never return to app",
+    symptom: "Users open docs and never come back to product",
     cause: "No re-engagement trigger after documentation exit",
     impact: "Setup abandonment at integration step",
-  },
-  {
-    symptom: "Signup succeeds but first action never happens",
-    cause: "Empty state provides no direction — user leaves",
-    impact: "Activation rate below 30%",
   },
 ];
 
@@ -43,13 +42,9 @@ const RevenueLeakRecognition = () => (
   <section className="py-20 px-6">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal>
-        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">REVENUE LEAK RECOGNITION</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          Companies don't lose revenue from traffic.
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">
+          Where revenue actually disappears
         </h2>
-        <p className="text-2xl sm:text-3xl font-extrabold text-muted-foreground mb-12">
-          They lose it from invisible leaks.
-        </p>
       </ScrollReveal>
 
       <div className="grid gap-4">
@@ -72,6 +67,12 @@ const RevenueLeakRecognition = () => (
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal delay={0.5}>
+        <p className="text-muted-foreground text-sm mt-8 text-center">
+          If even one looks familiar, you likely have measurable loss.
+        </p>
+      </ScrollReveal>
     </div>
   </section>
 );
