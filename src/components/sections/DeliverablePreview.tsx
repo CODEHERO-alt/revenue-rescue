@@ -19,18 +19,16 @@ const DeliverablePreview = () => (
   <section className="py-20 px-6">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal>
-        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">WHAT YOU RECEIVE</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          You don't get a report.
+          You receive a repair plan, not advice
         </h2>
-        <p className="text-2xl sm:text-3xl font-extrabold text-muted-foreground mb-12">
-          You get a repair plan.
+        <p className="text-muted-foreground text-lg mb-12">
+          Every leak listed. Every fix specified. Every priority ranked.
         </p>
       </ScrollReveal>
 
       <ScrollReveal delay={0.15}>
         <div className="rounded-xl border border-border bg-card overflow-hidden">
-          {/* Header bar */}
           <div className="flex items-center gap-2 px-5 py-3 border-b border-border bg-secondary/50">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-destructive/60" />
@@ -40,7 +38,6 @@ const DeliverablePreview = () => (
             <span className="mono text-xs text-muted-foreground ml-2">revenue-audit-report.json</span>
           </div>
 
-          {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -81,7 +78,6 @@ const DeliverablePreview = () => (
             </table>
           </div>
 
-          {/* Summary footer */}
           <div className="px-5 py-4 border-t border-border bg-secondary/30 flex flex-wrap gap-6 mono text-xs">
             <span className="text-muted-foreground">Total leaks: <span className="text-foreground font-bold">5</span></span>
             <span className="text-muted-foreground">Est. total revenue impact: <span className="text-primary font-bold">33–54%</span></span>

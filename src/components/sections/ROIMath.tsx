@@ -20,9 +20,8 @@ const ROIMath = () => {
     <section className="py-20 px-6 bg-card">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">THE MATH</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">
-            Fixing one leak pays for the audit.
+            Why companies do this
           </h2>
         </ScrollReveal>
 
@@ -40,7 +39,6 @@ const ROIMath = () => {
           ))}
         </div>
 
-        {/* Inline calculator */}
         <ScrollReveal delay={0.35}>
           <div className="p-6 rounded-xl bg-background border border-border">
             <p className="font-bold text-base mb-4">Estimate your leak range</p>
@@ -74,11 +72,9 @@ const ROIMath = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={0.45}>
-          <div className="mt-8 text-center">
-            <p className="text-muted-foreground text-sm">Audit cost</p>
-            <p className="text-4xl font-black text-foreground my-2">$2,500</p>
-            <p className="text-muted-foreground text-sm">One-time. Pays for itself in the first month.</p>
-          </div>
+          <p className="text-muted-foreground text-sm mt-8 text-center">
+            Recovering one issue usually covers the audit.
+          </p>
         </ScrollReveal>
       </div>
     </section>

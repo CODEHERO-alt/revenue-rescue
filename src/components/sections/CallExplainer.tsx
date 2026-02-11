@@ -1,26 +1,25 @@
-import { Clock, MessageSquare, Search } from "lucide-react";
+import { ArrowRight, Clock, MessageSquare, Search } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const steps = [
   { icon: Clock, title: "15-minute fit check", desc: "We verify your company matches the audit criteria." },
-  { icon: MessageSquare, title: "No pitch", desc: "We ask about your stack, your traffic, and your conversion points. That's it." },
-  { icon: Search, title: "We verify leaks exist first", desc: "If we can't see signals of revenue leakage, we tell you. No engagement." },
+  { icon: MessageSquare, title: "No pitch", desc: "We ask about your stack, your traffic, and your conversion points." },
+  { icon: Search, title: "We confirm leaks exist", desc: "If we cannot see signals of revenue leakage, you leave with clarity." },
 ];
 
 const CallExplainer = () => (
   <section className="py-20 px-6">
     <div className="max-w-3xl mx-auto">
       <ScrollReveal>
-        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">WHAT HAPPENS ON THE CALL</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          The call is qualification, not persuasion.
+          First step is verification, not sales
         </h2>
         <p className="text-muted-foreground text-lg mb-10">
           We determine if leaks exist. You determine if you want them fixed.
         </p>
       </ScrollReveal>
 
-      <div className="space-y-4">
+      <div className="space-y-4 mb-10">
         {steps.map((step, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
             <div className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border">
@@ -33,6 +32,19 @@ const CallExplainer = () => (
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal delay={0.4}>
+        <div className="text-center">
+          <a
+            href="https://wa.me/your-number"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg hover:scale-105 transition-transform duration-200"
+          >
+            Check if leaks exist <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
+      </ScrollReveal>
     </div>
   </section>
 );

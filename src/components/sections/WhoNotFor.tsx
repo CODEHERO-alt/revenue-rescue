@@ -1,26 +1,46 @@
-import { X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const exclusions = [
-  "Pre-product startups without a live product",
-  "Companies with no active users yet",
-  "Content blogs or media sites",
-  "Stores under $10k/month in revenue",
+const fitFor = [
+  "Growing SaaS with active users",
+  "Products already acquiring traffic",
+  "DTC brands running Meta ads",
+  "Entrepreneurs managing their own Meta campaigns",
+  "Teams that suspect they lose more than they realise",
+];
+
+const notFor = [
+  "Pre-launch startups",
+  "No users yet",
+  "Content sites",
+  "Very small stores under $10k/month",
 ];
 
 const WhoNotFor = () => (
   <section className="py-20 px-6">
     <div className="max-w-3xl mx-auto">
       <ScrollReveal>
-        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">WHO THIS IS NOT FOR</p>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">
-          We turn away most inquiries.
-        </h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">Who this is for</h2>
+      </ScrollReveal>
+
+      <div className="space-y-3 mb-12">
+        {fitFor.map((item, i) => (
+          <ScrollReveal key={i} delay={i * 0.06}>
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border">
+              <Check className="w-5 h-5 text-primary shrink-0" />
+              <span className="text-foreground/90 text-sm">{item}</span>
+            </div>
+          </ScrollReveal>
+        ))}
+      </div>
+
+      <ScrollReveal>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">Who this is not for</h2>
       </ScrollReveal>
 
       <div className="space-y-3">
-        {exclusions.map((item, i) => (
-          <ScrollReveal key={i} delay={i * 0.08}>
+        {notFor.map((item, i) => (
+          <ScrollReveal key={i} delay={i * 0.06}>
             <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border">
               <X className="w-5 h-5 text-destructive shrink-0" />
               <span className="text-foreground/90 text-sm">{item}</span>
@@ -28,12 +48,6 @@ const WhoNotFor = () => (
           </ScrollReveal>
         ))}
       </div>
-
-      <ScrollReveal delay={0.4}>
-        <p className="text-muted-foreground text-sm mt-6">
-          This signals seriousness. The audit is built for companies already generating revenue that suspect they are losing more than they realize.
-        </p>
-      </ScrollReveal>
     </div>
   </section>
 );
