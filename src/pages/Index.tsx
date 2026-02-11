@@ -26,9 +26,9 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-6"
           >
-            Your growth isn't stalled —
+            Your Product Is
             <br />
-            <span className="text-gradient-gold">it's quietly leaking.</span>
+            <span className="text-gradient-gold">Quietly Leaking Revenue.</span>
           </motion.h1>
 
           <motion.p
@@ -52,14 +52,6 @@ const Index = () => {
             Check if leaks exist <ArrowRight className="w-5 h-5" />
           </motion.a>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-muted-foreground text-sm mt-6"
-          >
-            Built for teams and businesses that already generate real revenue.
-          </motion.p>
         </div>
       </section>
 
