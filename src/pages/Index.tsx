@@ -6,7 +6,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="relative max-w-5xl mx-auto px-6 pt-20 pb-24 text-center">
+        <div className="relative max-w-5xl mx-auto px-6 pt-32 pb-32 min-h-screen flex flex-col items-center justify-center text-center">
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-glow bg-secondary">
             <span className="mono text-sm text-primary font-medium tracking-wider">REVENUE INFRASTRUCTURE SPECIALIST</span>
           </div>
