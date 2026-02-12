@@ -100,4 +100,35 @@
       linear-gradient(90deg, hsl(220 15% 16% / 0.5) 1px, transparent 1px);
     background-size: 60px 60px;
   }
+
+  .btn-gold-fill {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .btn-gold-fill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      to top,
+      hsl(45 100% 60%) 0%,
+      hsl(45 100% 65%) 100%
+    );
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-gold-fill:hover::before {
+    transform: scaleY(1);
+  }
+
+  .btn-gold-fill:hover {
+    box-shadow: 0 0 20px -4px hsl(45 100% 55% / 0.5),
+                0 0 40px -8px hsl(45 100% 55% / 0.25);
+  }
 }

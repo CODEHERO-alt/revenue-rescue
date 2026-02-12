@@ -10,7 +10,7 @@ const FloatingNav = () => {
     if (dismissed) return;
     const onScroll = () => {
       const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-      setVisible(scrollPercent > 0.35);
+      setVisible(scrollPercent > 0.25);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -35,7 +35,7 @@ const FloatingNav = () => {
             href="https://wa.me/your-number"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold hover:scale-105 transition-transform whitespace-nowrap"
+            className="btn-gold-fill inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold transition-transform whitespace-nowrap"
           >
             Check if leaks exist <ArrowRight className="w-3.5 h-3.5" />
           </a>
