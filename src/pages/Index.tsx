@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import GoldParticles from "@/components/GoldParticles";
+import ScatterText from "@/components/ScatterText";
 import RevenueLeakRecognition from "@/components/sections/RevenueLeakRecognition";
 import AuditMechanism from "@/components/sections/AuditMechanism";
 import DeliverablePreview from "@/components/sections/DeliverablePreview";
@@ -28,9 +29,11 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] tracking-tight mb-6"
           >
-            Your Product Is
+            <ScatterText>Your Product Is</ScatterText>
             <br />
-            <span className="text-gradient-gold">Quietly Leaking Revenue.</span>
+            <span className="text-gradient-gold">
+              <ScatterText>Quietly Leaking Revenue.</ScatterText>
+            </span>
           </motion.h1>
 
           <motion.p
