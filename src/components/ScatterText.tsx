@@ -7,9 +7,10 @@ interface ScatterWordProps {
   dirX: number;
   dirY: number;
   dirRotate: number;
+  wordClassName?: string;
 }
 
-const ScatterWord = ({ word, scrollYProgress, dirX, dirY, dirRotate }: ScatterWordProps) => {
+const ScatterWord = ({ word, scrollYProgress, dirX, dirY, dirRotate, wordClassName = "" }: ScatterWordProps) => {
   const x = useTransform(scrollYProgress, [0.15, 0.6], [0, dirX]);
   const y = useTransform(scrollYProgress, [0.15, 0.6], [0, dirY]);
   const rotate = useTransform(scrollYProgress, [0.15, 0.6], [0, dirRotate]);
@@ -18,7 +19,7 @@ const ScatterWord = ({ word, scrollYProgress, dirX, dirY, dirRotate }: ScatterWo
   return (
     <motion.span
       style={{ x, y, rotate, opacity }}
-      className="inline-block mr-[0.3em] last:mr-0"
+      className={`inline-block mr-[0.3em] last:mr-0 ${wordClassName}`}
     >
       {word}
     </motion.span>
@@ -50,7 +51,7 @@ const ScatterText = ({ children, className = "" }: ScatterTextProps) => {
   });
 
   return (
-    <motion.span ref={ref} className={`inline ${className}`}>
+    <motion.span ref={ref} className="inline">
       {words.map((word, i) => (
         <ScatterWord
           key={i}
@@ -59,6 +60,7 @@ const ScatterText = ({ children, className = "" }: ScatterTextProps) => {
           dirX={scatterDirections[i].x}
           dirY={scatterDirections[i].y}
           dirRotate={scatterDirections[i].rotate}
+          wordClassName={className}
         />
       ))}
     </motion.span>

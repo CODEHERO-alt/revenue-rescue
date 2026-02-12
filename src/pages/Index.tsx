@@ -31,9 +31,7 @@ const Index = () => {
           >
             <ScatterText>Your Product Is</ScatterText>
             <br />
-            <span className="text-gradient-gold">
-              <ScatterText>Quietly Leaking Revenue.</ScatterText>
-            </span>
+            <ScatterText className="text-gradient-gold">Quietly Leaking Revenue.</ScatterText>
           </motion.h1>
 
           <motion.p
