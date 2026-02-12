@@ -13,10 +13,12 @@ import ExampleDiagnosis from "@/components/sections/ExampleDiagnosis";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import FAQ from "@/components/sections/FAQ";
 import FloatingNav from "@/components/FloatingNav";
+import AnnouncementBar from "@/components/AnnouncementBar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <AnnouncementBar />
       <FloatingNav />
       {/* 1 — Hero Realisation */}
       <section className="relative overflow-hidden">
