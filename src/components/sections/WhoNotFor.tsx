@@ -13,7 +13,7 @@ const notFor = [
   "Pre-launch startups",
   "No users yet",
   "Content sites",
-  
+  "Hobby projects or side hustles",
 ];
 
 const WhoNotFor = () => (
