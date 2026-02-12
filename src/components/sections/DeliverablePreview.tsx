@@ -38,7 +38,8 @@ const DeliverablePreview = () => (
             <span className="mono text-xs text-muted-foreground ml-2">revenue-audit-report.json</span>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Desktop table */}
+          <div className="overflow-x-auto hidden sm:block">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
@@ -78,10 +79,36 @@ const DeliverablePreview = () => (
             </table>
           </div>
 
-          <div className="px-5 py-4 border-t border-border bg-secondary/30 flex flex-wrap gap-6 mono text-xs">
+          {/* Mobile cards */}
+          <div className="sm:hidden divide-y divide-border">
+            {mockLeaks.map((leak, i) => (
+              <motion.div
+                key={leak.id}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 + 0.3 }}
+                className="p-4 space-y-2"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="mono text-xs text-muted-foreground">{leak.id}</span>
+                  <span className={`mono text-xs font-medium px-2 py-0.5 rounded ${severityColor(leak.severity)}`}>
+                    {leak.severity}
+                  </span>
+                </div>
+                <p className="text-sm text-foreground/90">{leak.issue}</p>
+                <div className="flex items-center justify-between">
+                  <span className="mono text-sm font-bold text-primary">{leak.revenueImpact}</span>
+                  <span className="mono text-xs text-muted-foreground">{leak.effort} · #{leak.priority}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="px-5 py-4 border-t border-border bg-secondary/30 flex flex-wrap gap-4 sm:gap-6 mono text-xs">
             <span className="text-muted-foreground">Total leaks: <span className="text-foreground font-bold">5</span></span>
-            <span className="text-muted-foreground">Est. total revenue impact: <span className="text-primary font-bold">33–54%</span></span>
-            <span className="text-muted-foreground">Total repair effort: <span className="text-foreground font-bold">17h</span></span>
+            <span className="text-muted-foreground">Est. impact: <span className="text-primary font-bold">33–54%</span></span>
+            <span className="text-muted-foreground">Repair: <span className="text-foreground font-bold">17h</span></span>
           </div>
         </div>
       </ScrollReveal>

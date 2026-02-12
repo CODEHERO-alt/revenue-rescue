@@ -1,4 +1,4 @@
-import { Check, X, Minus } from "lucide-react";
+import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const rows = [
@@ -29,8 +29,9 @@ const ComparisonTable = () => (
         </p>
       </ScrollReveal>
 
+      {/* Desktop table */}
       <ScrollReveal delay={0.15}>
-        <div className="rounded-xl border border-border overflow-hidden">
+        <div className="rounded-xl border border-border overflow-hidden hidden sm:block">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -55,6 +56,31 @@ const ComparisonTable = () => (
           </div>
         </div>
       </ScrollReveal>
+
+      {/* Mobile cards */}
+      <div className="sm:hidden space-y-4">
+        {rows.map((row, i) => (
+          <ScrollReveal key={i} delay={i * 0.06}>
+            <div className="rounded-xl border border-border bg-card p-4">
+              <p className="font-medium text-foreground/90 text-sm mb-3">{row.feature}</p>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-primary font-bold">Revenue Audit</span>
+                  <CellValue val={row.audit} />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">CRO Agency</span>
+                  <CellValue val={row.cro} />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-muted-foreground">Internal Hire</span>
+                  <CellValue val={row.hire} />
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        ))}
+      </div>
     </div>
   </section>
 );
