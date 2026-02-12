@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const announcements = [
   "💰 Money Back Guarantee If We Don't Improve Revenue",
   "⚡ Average Payback On Investment: 30 Days",
-  "🏆 Helped 200+ Companies Decrease Their CPA While Maintaining Quality Leads",
+  "🏆 200+ Companies Helped Decrease CPA With Quality Leads",
 ];
 
 const AnnouncementBar = () => {
