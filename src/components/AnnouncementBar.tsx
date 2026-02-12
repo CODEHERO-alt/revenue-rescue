@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const announcements = [
-  "💰 Money Back Guarantee If We Don't Improve Revenue",
-  "⚡ Average Payback On Investment: 30 Days",
-  "🏆 Lower CPA With Higher Quality Leads For 200+ Companies",
+  { text: "💰 Money Back Guarantee If We Don't Improve Revenue", className: "" },
+  { text: "⚡ Average Payback On Investment: 30 Days", className: "" },
+  { text: "🏆 Lower CPA With Higher Quality Leads For 200+ Companies", className: "text-[11px] sm:text-[13px]" },
 ];
 
 const AnnouncementBar = () => {
@@ -27,9 +27,9 @@ const AnnouncementBar = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -16, opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="text-xs sm:text-sm font-semibold tracking-wide text-center whitespace-nowrap"
+            className={`text-xs sm:text-sm font-semibold tracking-wide text-center whitespace-nowrap ${announcements[index].className}`}
           >
-            {announcements[index]}
+            {announcements[index].text}
           </motion.p>
         </AnimatePresence>
       </div>
