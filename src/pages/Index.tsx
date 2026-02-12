@@ -16,7 +16,7 @@ import FloatingNav from "@/components/FloatingNav";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <FloatingNav />
       {/* 1 — Hero Realisation */}
       <section className="relative overflow-hidden">
