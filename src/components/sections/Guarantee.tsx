@@ -11,11 +11,11 @@ const Guarantee = () => (
             <p className="mono text-primary text-sm font-medium tracking-wider">GUARANTEE</p>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
-            If we cannot identify at least three revenue-impacting issues, you do not proceed.
+            If we find fewer than 3 signal issues, you don't pay.
           </h2>
           <p className="text-muted-foreground leading-relaxed text-sm">
-            We have never failed to find significant leaks in a company doing $10k+/month. 
-            If your infrastructure is already clean, we tell you — and you owe nothing.
+            We've never failed to find significant tracking failures in a Shopify store spending $5k+/month on Meta.
+            If your signals are already clean, we tell you — and you owe nothing.
           </p>
         </div>
       </ScrollReveal>

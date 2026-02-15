@@ -1,27 +1,26 @@
 import { AlertTriangle, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const findings = [
   {
-    step: "Landing → Signup",
-    leak: "CTA hidden below fold on mobile. 62% of mobile users never see it.",
-    impact: "~18% of potential signups lost",
+    step: "Pixel → Purchase event",
+    leak: "Purchase pixel fires on the order status page but also on the thank-you redirect. Every order counted twice.",
+    impact: "Reported ROAS inflated by ~40%",
   },
   {
-    step: "Signup → Activation",
-    leak: "Empty dashboard after signup. No guided first action. Users leave within 90 seconds.",
-    impact: "~35% activation failure",
+    step: "CAPI → Event match",
+    leak: "Server events sending without email or phone hashing. Meta match rate at 18% instead of 60%+.",
+    impact: "Algorithm can't attribute purchases back to ads",
   },
   {
-    step: "Activation → Trial Usage",
-    leak: "Core feature buried 3 clicks deep. Trial users never discover it.",
-    impact: "~25% of trial value unrealized",
+    step: "AEM → Priority",
+    leak: "ViewContent ranked above Purchase in Aggregated Event Measurement. Meta optimised for browsers, not buyers.",
+    impact: "CPA increased ~35% over 6 weeks",
   },
   {
-    step: "Trial → Conversion",
-    leak: "Upgrade prompt appears once and never resurfaces. No usage-based triggers.",
-    impact: "~40% of qualified users never see pricing again",
+    step: "Pixel → Add to Cart",
+    leak: "AddToCart event fires on product page load, not on button click. Every visitor counted as intent.",
+    impact: "Retargeting pool polluted with non-buyers",
   },
 ];
 
@@ -29,12 +28,12 @@ const ExampleDiagnosis = () => (
   <section className="py-20 px-6 bg-card">
     <div className="max-w-5xl mx-auto">
       <ScrollReveal>
-        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">EXAMPLE DIAGNOSIS</p>
+        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">SCENARIO OUTCOME</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          A real teardown. Anonymized.
+          What a typical audit uncovers.
         </h2>
         <p className="text-muted-foreground text-lg mb-12">
-          SaaS product. $40k/month revenue. Four leaks identified in the first 20 minutes.
+          Shopify store. $80k/month ad spend. Four signal failures found in the first audit pass.
         </p>
       </ScrollReveal>
 
@@ -66,10 +65,12 @@ const ExampleDiagnosis = () => (
         <div className="mt-8 p-5 rounded-xl border border-primary/20 bg-primary/5">
           <div className="flex items-center gap-2 mb-2">
             <ArrowRight className="w-4 h-4 text-primary" />
-            <span className="font-bold text-sm">Combined estimated revenue impact</span>
+            <span className="font-bold text-sm">After repair</span>
           </div>
-          <p className="mono text-2xl font-black text-primary">$14k – $22k/month</p>
-          <p className="text-muted-foreground text-sm mt-1">Total repair time: 11 hours of developer work.</p>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Clean signals restored. Meta match rate from 18% to 67%. CPA dropped 28% within two weeks of fixes going live. 
+            <span className="mono text-xs text-muted-foreground/60 ml-2">(Scenario outcome based on typical audit results)</span>
+          </p>
         </div>
       </ScrollReveal>
     </div>
