@@ -1,61 +1,47 @@
-import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const steps = [
-  { num: "01", title: "Map behaviour flow" },
-  { num: "02", title: "Detect intent drop" },
-  { num: "03", title: "Classify friction" },
-  { num: "04", title: "Estimate revenue impact" },
-  { num: "05", title: "Prioritise fixes" },
-  { num: "06", title: "Provide implementation plan" },
+const breakdowns = [
+  {
+    label: "Pixel misfires",
+    desc: "Events fire on wrong pages, fire duplicates, or don't fire at all. Meta's algorithm receives noise instead of signal.",
+  },
+  {
+    label: "CAPI gaps",
+    desc: "Server-side events aren't configured or are sending incomplete data. Meta can't match conversions back to ad clicks.",
+  },
+  {
+    label: "Event priority errors",
+    desc: "Purchase events compete with low-value events like PageView. Meta optimises for the wrong action.",
+  },
+  {
+    label: "Deduplication failures",
+    desc: "Both pixel and CAPI send the same event. Meta double-counts conversions, inflating reported ROAS while real performance drops.",
+  },
 ];
 
 const AuditMechanism = () => (
   <section className="py-20 px-6 bg-card">
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <ScrollReveal>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">
-          We reconstruct the user journey and isolate drop-offs
+        <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">WHY IT HAPPENS</p>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+          Your tracking is sending bad data to Meta.
         </h2>
+        <p className="text-muted-foreground text-lg mb-12">
+          Meta's ad algorithm is only as good as the signals it receives. Most Shopify stores have at least two of these issues.
+        </p>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {steps.map((step, i) => (
-          <ScrollReveal key={step.num} delay={i * 0.08}>
-            <div className="relative p-6 rounded-xl bg-background border border-border h-full flex items-center gap-4">
-              <span className="mono text-2xl font-black text-primary/30">{step.num}</span>
-              <h3 className="font-bold text-sm">{step.title}</h3>
+      <div className="grid sm:grid-cols-2 gap-4">
+        {breakdowns.map((item, i) => (
+          <ScrollReveal key={i} delay={i * 0.08}>
+            <div className="p-6 rounded-xl bg-background border border-border h-full">
+              <h3 className="font-bold text-base mb-2">{item.label}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
             </div>
           </ScrollReveal>
         ))}
       </div>
-
-      <ScrollReveal delay={0.5}>
-        <div className="mt-10 flex items-center justify-center gap-2 overflow-x-auto py-4">
-          {steps.map((step, i) => (
-            <div key={step.num} className="flex items-center gap-2 shrink-0">
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 + 0.3 }}
-                className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center"
-              >
-                <span className="mono text-xs font-bold text-primary">{step.num}</span>
-              </motion.div>
-              {i < steps.length - 1 && (
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 + 0.4 }}
-                  className="w-8 h-px bg-primary/30 origin-left"
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </ScrollReveal>
     </div>
   </section>
 );
