@@ -2,12 +2,12 @@ import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const rows = [
-  { feature: "Time to results", audit: "2–3 days", agency: "2–6 weeks", diy: "Ongoing" },
-  { feature: "Developer-ready fixes", audit: true, agency: false, diy: "partial" },
-  { feature: "Signal-level diagnosis", audit: true, agency: false, diy: false },
-  { feature: "Cost", audit: "$2,500 one-time", agency: "$3k–$10k/mo", diy: "Your time" },
-  { feature: "Ongoing commitment", audit: "None", agency: "3–6 month contract", diy: "Indefinite" },
-  { feature: "Post-fix verification", audit: true, agency: "sometimes", diy: false },
+  { feature: "Time to first insight", audit: "48 hours", cro: "2–4 weeks", hire: "1–3 months" },
+  { feature: "Developer-ready instructions", audit: true, cro: false, hire: true },
+  { feature: "Revenue impact quantified", audit: true, cro: "sometimes", hire: false },
+  { feature: "Cost", audit: "$2,500 one-time", cro: "$3k–$10k/mo", hire: "$8k–$15k/mo" },
+  { feature: "Ongoing commitment", audit: "None", cro: "3–6 month contract", hire: "Full-time" },
+  { feature: "Covers full user journey", audit: true, cro: "partial", hire: "depends" },
 ];
 
 const CellValue = ({ val }: { val: string | boolean }) => {
@@ -22,10 +22,10 @@ const ComparisonTable = () => (
       <ScrollReveal>
         <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">COMPARISON</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          Why not just hire an agency?
+          Why not just hire a CRO agency?
         </h2>
         <p className="text-muted-foreground text-lg mb-10">
-          Agencies run ads. We fix the infrastructure that makes ads work.
+          Different tools for different problems.
         </p>
       </ScrollReveal>
 
@@ -37,9 +37,9 @@ const ComparisonTable = () => (
               <thead>
                 <tr className="border-b border-border bg-card">
                   <th className="text-left px-5 py-3 text-muted-foreground font-medium"></th>
-                  <th className="text-left px-5 py-3 font-bold text-primary">Signal Audit</th>
-                  <th className="text-left px-5 py-3 text-muted-foreground font-medium">Ad Agency</th>
-                  <th className="text-left px-5 py-3 text-muted-foreground font-medium">DIY</th>
+                  <th className="text-left px-5 py-3 font-bold text-primary">Revenue Audit</th>
+                  <th className="text-left px-5 py-3 text-muted-foreground font-medium">CRO Agency</th>
+                  <th className="text-left px-5 py-3 text-muted-foreground font-medium">Internal Hire</th>
                 </tr>
               </thead>
               <tbody>
@@ -47,8 +47,8 @@ const ComparisonTable = () => (
                   <tr key={i} className="border-b border-border/50 last:border-0">
                     <td className="px-5 py-3 text-foreground/90 font-medium">{row.feature}</td>
                     <td className="px-5 py-3 text-foreground"><CellValue val={row.audit} /></td>
-                    <td className="px-5 py-3 text-muted-foreground"><CellValue val={row.agency} /></td>
-                    <td className="px-5 py-3 text-muted-foreground"><CellValue val={row.diy} /></td>
+                    <td className="px-5 py-3 text-muted-foreground"><CellValue val={row.cro} /></td>
+                    <td className="px-5 py-3 text-muted-foreground"><CellValue val={row.hire} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -65,16 +65,16 @@ const ComparisonTable = () => (
               <p className="font-medium text-foreground/90 text-sm mb-3">{row.feature}</p>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-primary font-bold">Signal Audit</span>
+                  <span className="text-xs text-primary font-bold">Revenue Audit</span>
                   <CellValue val={row.audit} />
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">Ad Agency</span>
-                  <CellValue val={row.agency} />
+                  <span className="text-xs text-muted-foreground">CRO Agency</span>
+                  <CellValue val={row.cro} />
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-muted-foreground">DIY</span>
-                  <CellValue val={row.diy} />
+                  <span className="text-xs text-muted-foreground">Internal Hire</span>
+                  <CellValue val={row.hire} />
                 </div>
               </div>
             </div>

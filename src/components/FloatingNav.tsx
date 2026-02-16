@@ -29,7 +29,7 @@ const FloatingNav = () => {
           className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 sm:gap-4 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border border-border bg-card/80 backdrop-blur-md shadow-lg max-w-[calc(100vw-2rem)]"
         >
           <span className="font-bold text-xs sm:text-sm tracking-tight text-foreground hidden sm:inline">
-            Signal Audit
+            Revenue Audit
           </span>
           <a
             href="https://wa.me/your-number"
@@ -37,7 +37,7 @@ const FloatingNav = () => {
             rel="noopener noreferrer"
             className="btn-gold-fill inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold transition-transform whitespace-nowrap"
           >
-            Book revenue audit <ArrowRight className="w-3.5 h-3.5" />
+            Check if leaks exist <ArrowRight className="w-3.5 h-3.5" />
           </a>
           <button
             onClick={() => setDismissed(true)}

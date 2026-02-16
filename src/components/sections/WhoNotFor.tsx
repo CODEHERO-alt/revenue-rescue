@@ -2,25 +2,25 @@ import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const fitFor = [
-  "Shopify stores spending $5k+/month on Meta ads",
-  "DTC brands with traffic but declining ROAS",
-  "Founders managing their own Meta campaigns",
-  "Stores that scaled spend but CPA won't come down",
-  "Teams that suspect tracking is broken but can't diagnose it",
+  "Growing SaaS with active users",
+  "Products already acquiring traffic",
+  "DTC brands running Meta ads",
+  "Entrepreneurs managing their own Meta campaigns",
+  "Teams that suspect they lose more than they realise",
 ];
 
 const notFor = [
-  "Pre-launch stores with no ad history",
-  "Stores not running Meta ads",
-  "Businesses spending under $3k/month on ads",
-  "Dropshipping stores with no retention focus",
+  "Pre-launch startups",
+  "No users yet",
+  "Content sites",
+  "Hobby projects or side hustles",
 ];
 
 const WhoNotFor = () => (
   <section className="py-20 px-6">
     <div className="max-w-3xl mx-auto">
       <ScrollReveal>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">This is for you if</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">Who this is for</h2>
       </ScrollReveal>
 
       <div className="space-y-3 mb-12">
@@ -35,7 +35,7 @@ const WhoNotFor = () => (
       </div>
 
       <ScrollReveal>
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">This is not for you if</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">Who this is not for</h2>
       </ScrollReveal>
 
       <div className="space-y-3">
