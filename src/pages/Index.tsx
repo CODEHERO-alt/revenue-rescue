@@ -68,6 +68,17 @@ const Index = () => {
           >
             Takes 15 minutes. If we cannot identify at least three revenue impacting issues, you do not proceed.
           </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.85 }}
+            className="text-muted-foreground text-sm mt-6 max-w-xl mx-auto leading-relaxed"
+          >
+            We detect leaks from observable behaviour patterns across the journey.
+            <br />
+            No internal access needed for the first diagnosis.
+          </motion.p>
         </div>
       </section>
 
