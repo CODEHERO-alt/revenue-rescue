@@ -2,12 +2,12 @@ import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const rows = [
-  { feature: "Time to first insight", audit: "48 hours", cro: "2–4 weeks", hire: "1–3 months" },
-  { feature: "Developer-ready instructions", audit: true, cro: false, hire: true },
+  { feature: "Time to first insight", audit: "48 hours", cro: "2 to 4 weeks", hire: "1 to 3 months" },
+  { feature: "Implementation ready fixes", audit: true, cro: false, hire: true },
   { feature: "Revenue impact quantified", audit: true, cro: "sometimes", hire: false },
-  { feature: "Cost", audit: "$2,500 one-time", cro: "$3k–$10k/mo", hire: "$8k–$15k/mo" },
-  { feature: "Ongoing commitment", audit: "None", cro: "3–6 month contract", hire: "Full-time" },
-  { feature: "Covers full user journey", audit: true, cro: "partial", hire: "depends" },
+  { feature: "Cost", audit: "$2,500 one time", cro: "$3k to $10k/mo", hire: "$8k to $15k/mo" },
+  { feature: "Ongoing commitment", audit: "None", cro: "3 to 6 month contract", hire: "Full time" },
+  { feature: "Covers full journey", audit: true, cro: "partial", hire: "depends" },
 ];
 
 const CellValue = ({ val }: { val: string | boolean }) => {
@@ -22,7 +22,7 @@ const ComparisonTable = () => (
       <ScrollReveal>
         <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">COMPARISON</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          Why not just hire a CRO agency?
+          Why not just hire a CRO agency or a growth team
         </h2>
         <p className="text-muted-foreground text-lg mb-10">
           Different tools for different problems.

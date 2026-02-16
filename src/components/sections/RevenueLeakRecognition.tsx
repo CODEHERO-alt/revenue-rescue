@@ -1,43 +1,48 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const leaks = [
   {
-    symptom: "Users sign up but never reach first value moment",
-    cause: "Empty state after signup provides no direction",
-    impact: "Activation rate drops below 30%",
+    symptom: "People enter but never reach the first value moment",
+    cause: "The first screen after entry gives no direction and no guided next step",
+    impact: "First value moment rate falls below 30 percent",
   },
   {
-    symptom: "Pricing page creates hesitation before decision",
-    cause: "Unclear value anchoring at the decision point",
-    impact: "Demo requests drop 20–40%",
+    symptom: "The decision page creates hesitation right before purchase",
+    cause: "Value anchoring is unclear at the exact decision point",
+    impact: "High intent visits drop 20 to 40 percent",
   },
   {
-    symptom: "Mobile users never see the primary action",
-    cause: "CTA sits below fold or competes with surrounding content",
-    impact: "30–50% of mobile traffic never engages",
+    symptom: "Mobile visitors never reach the primary action",
+    cause: "The main action sits below the fold or competes with surrounding content",
+    impact: "30 to 50 percent of mobile traffic never engages",
   },
   {
-    symptom: "Returning users restart onboarding each session",
+    symptom: "Returning visitors restart the journey each session",
     cause: "Session or state persistence failure",
     impact: "Repeat visitors treated as new, trust lost",
   },
   {
-    symptom: "Trial users activate but do not adopt core feature",
-    cause: "Onboarding skips the activation milestone",
-    impact: "Churn within 48 hours",
+    symptom: "People try once and do not return",
+    cause: "The first output is slow, confusing or not framed as a win",
+    impact: "Day one retention drops below 25 percent",
   },
   {
-    symptom: "Checkout silently fails and users leave",
-    cause: "Payment intent error swallowed on client side",
-    impact: "Lost buyers every day, undetected",
+    symptom: "Visitors consume the sales page but do not enroll",
+    cause: "Offer clarity breaks at pricing and guarantee",
+    impact: "Checkout initiation drops 15 to 35 percent",
   },
   {
-    symptom: "Users open docs and never come back to product",
-    cause: "No re-engagement trigger after documentation exit",
-    impact: "Setup abandonment at integration step",
+    symptom: "Add to cart happens but purchases fail",
+    cause: "Shipping, returns or trust cues appear too late",
+    impact: "Cart to purchase falls below 40 percent",
+  },
+  {
+    symptom: "High intent visitors bounce without taking any step",
+    cause: "Tracking or routing errors break attribution and follow up",
+    impact: "You lose both revenue and visibility",
   },
 ];
 

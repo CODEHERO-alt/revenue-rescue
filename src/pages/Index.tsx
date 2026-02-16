@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import GoldParticles from "@/components/GoldParticles";
 
+import RecognitionStrip from "@/components/sections/RecognitionStrip";
 import RevenueLeakRecognition from "@/components/sections/RevenueLeakRecognition";
 import AuditMechanism from "@/components/sections/AuditMechanism";
 import DeliverablePreview from "@/components/sections/DeliverablePreview";
@@ -14,6 +15,8 @@ import ComparisonTable from "@/components/sections/ComparisonTable";
 import FAQ from "@/components/sections/FAQ";
 import FloatingNav from "@/components/FloatingNav";
 import AnnouncementBar from "@/components/AnnouncementBar";
+
+const WA_LINK = "https://wa.me/REPLACE_WITH_NUMBER?text=Hey%20I%20want%20to%20check%20if%20leaks%20exist%20Can%20we%20do%20the%2015%20minute%20fit%20check";
 
 const Index = () => {
   return (
@@ -42,11 +45,11 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.35 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Most companies already have demand. They lose conversions in hidden points across onboarding, pricing, and activation.
+            Most businesses already have demand. People click, sign up, browse or start. But value never becomes obvious fast enough, so revenue leaks through silent drop offs across the journey.
           </motion.p>
 
           <motion.a
-            href="https://wa.me/your-number"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -54,11 +57,22 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="btn-gold-fill inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg transition-transform duration-200"
           >
-            Check if leaks exist <ArrowRight className="w-5 h-5" />
+            Check if leaks exist in your journey <ArrowRight className="w-5 h-5" />
           </motion.a>
 
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-muted-foreground text-sm mt-4"
+          >
+            Takes 15 minutes. If we cannot identify at least three revenue impacting issues, you do not proceed.
+          </motion.p>
         </div>
       </section>
+
+      {/* 1.5 — Recognition Strip */}
+      <RecognitionStrip />
 
       {/* 2 — Recognition */}
       <RevenueLeakRecognition />
@@ -91,7 +105,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center text-muted-foreground text-sm">
-          Revenue Infrastructure Audit · Leak Detection &amp; Repair
+          Revenue Infrastructure Audit · Leak Detection and Repair
         </div>
       </footer>
     </div>

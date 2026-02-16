@@ -67,7 +67,7 @@ const ROIMath = () => {
                 </motion.div>
               )}
             </div>
-            <p className="text-muted-foreground text-xs mt-3">Based on 15–45% typical revenue leak range across audited companies.</p>
+            <p className="text-muted-foreground text-xs mt-3">Based on typical 15 to 45 percent revenue leakage across audited journeys where demand exists but conversion mechanics are unclear.</p>
           </div>
         </ScrollReveal>
 

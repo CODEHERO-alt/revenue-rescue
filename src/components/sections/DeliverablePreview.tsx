@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const mockLeaks = [
-  { id: "LK-001", issue: "Checkout payment intent fails silently", severity: "Critical", revenueImpact: "12–18%", fix: "Add error boundary + retry logic on Stripe webhook", effort: "2h", priority: 1 },
-  { id: "LK-002", issue: "Mobile CTA below fold on pricing page", severity: "High", revenueImpact: "8–14%", fix: "Restructure pricing hierarchy, sticky CTA on mobile", effort: "3h", priority: 2 },
-  { id: "LK-003", issue: "Trial users skip activation milestone", severity: "High", revenueImpact: "6–10%", fix: "Insert guided activation flow after signup", effort: "4h", priority: 3 },
-  { id: "LK-004", issue: "Session state lost on return visit", severity: "Medium", revenueImpact: "4–7%", fix: "Persist onboarding progress to database", effort: "2h", priority: 4 },
-  { id: "LK-005", issue: "Integration docs exit with no return path", severity: "Medium", revenueImpact: "3–5%", fix: "Add in-app setup wizard, reduce doc dependency", effort: "6h", priority: 5 },
+  { id: "LK 001", issue: "Payment or form submission fails silently", severity: "Critical", revenueImpact: "12, 18%", fix: "Add error handling, retry logic and a visible fallback for failed payments or form submissions", effort: "2h", priority: 1 },
+  { id: "LK 002", issue: "Mobile CTA below fold on decision page", severity: "High", revenueImpact: "8, 14%", fix: "Restructure page hierarchy, sticky CTA on mobile", effort: "3h", priority: 2 },
+  { id: "LK 003", issue: "New visitors skip the first value moment", severity: "High", revenueImpact: "6, 10%", fix: "Insert a guided first win flow immediately after entry", effort: "4h", priority: 3 },
+  { id: "LK 004", issue: "Session state lost on return visit", severity: "Medium", revenueImpact: "4, 7%", fix: "Persist journey progress to database", effort: "2h", priority: 4 },
+  { id: "LK 005", issue: "Documentation exit with no return path", severity: "Medium", revenueImpact: "3, 5%", fix: "Add in context setup wizard, reduce doc dependency", effort: "6h", priority: 5 },
 ];
 
 const severityColor = (s: string) => {
@@ -107,7 +107,7 @@ const DeliverablePreview = () => (
 
           <div className="px-5 py-4 border-t border-border bg-secondary/30 flex flex-wrap gap-4 sm:gap-6 mono text-xs">
             <span className="text-muted-foreground">Total leaks: <span className="text-foreground font-bold">5</span></span>
-            <span className="text-muted-foreground">Est. impact: <span className="text-primary font-bold">33–54%</span></span>
+            <span className="text-muted-foreground">Est. impact: <span className="text-primary font-bold">33, 54%</span></span>
             <span className="text-muted-foreground">Repair: <span className="text-foreground font-bold">17h</span></span>
           </div>
         </div>

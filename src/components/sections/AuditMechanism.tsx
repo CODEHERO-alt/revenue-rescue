@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const steps = [
-  { num: "01", title: "Map behaviour flow" },
-  { num: "02", title: "Detect intent drop" },
-  { num: "03", title: "Classify friction" },
-  { num: "04", title: "Estimate revenue impact" },
-  { num: "05", title: "Prioritise fixes" },
-  { num: "06", title: "Provide implementation plan" },
+  { num: "01", title: "Map the full journey" },
+  { num: "02", title: "Detect intent drop offs" },
+  { num: "03", title: "Classify friction type" },
+  { num: "04", title: "Quantify revenue impact" },
+  { num: "05", title: "Prioritise highest leverage fixes" },
+  { num: "06", title: "Deliver implementation plan" },
 ];
 
 const AuditMechanism = () => (
@@ -15,7 +15,7 @@ const AuditMechanism = () => (
     <div className="max-w-5xl mx-auto">
       <ScrollReveal>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-12">
-          We reconstruct the user journey and isolate drop-offs
+          We reconstruct the journey and isolate drop offs
         </h2>
       </ScrollReveal>
 

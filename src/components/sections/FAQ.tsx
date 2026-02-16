@@ -8,24 +8,24 @@ import {
 
 const faqs = [
   {
-    q: "Why not just use analytics tools like GA4 or Mixpanel?",
-    a: "Analytics tools show you what happened. They don't tell you what should have happened. We isolate the gap between user intent and user action, then quantify the revenue sitting in that gap.",
+    q: "Why not just use GA4, Mixpanel or Hotjar?",
+    a: "Tools show what happened. We tell you why it happened and what to change. We connect behavior to revenue impact and give implementable fixes.",
   },
   {
-    q: "What if you don't find anything significant?",
-    a: "If we cannot identify at least 3 revenue-impacting issues, you don't pay. We have never triggered this guarantee on a company doing $10k+/month.",
+    q: "What if you do not find anything significant?",
+    a: "Then you do not proceed. If we cannot identify at least three revenue impacting issues, we stop and you owe nothing.",
   },
   {
-    q: "Do you implement the fixes or just report them?",
-    a: "You receive a developer-ready repair plan with exact instructions, effort estimates, and priority order. Your team implements. We verify after.",
+    q: "Do you implement fixes or only report them?",
+    a: "We deliver a repair plan that your team can implement. If you want implementation support, you can request it after the audit, but the audit stands alone.",
   },
   {
-    q: "How is this different from a CRO agency?",
-    a: "CRO agencies run A/B tests on surface-level elements. We detect structural leaks in your revenue infrastructure, broken flows, silent failures, missing activation steps. Different problem, different method.",
+    q: "What access do you need?",
+    a: "Minimum is analytics access and a walkthrough of the journey. In some cases we request read only access to key tools after the fit check.",
   },
   {
-    q: "What do you need access to?",
-    a: "Read-only access to your product (a test account), your analytics, and your conversion data. No code access required for the audit phase.",
+    q: "Who is the fit check for?",
+    a: "Teams with real traffic and real intent, where one repair could pay for the audit.",
   },
 ];
 
