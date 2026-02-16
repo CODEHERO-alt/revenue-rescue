@@ -101,21 +101,17 @@ const ExampleDiagnosis = () => {
           {active.steps.map((f, i) => (
             <ScrollReveal key={`${activeTab}-${i}`} delay={i * 0.08}>
               <div className="rounded-xl border border-border bg-background p-5 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                  <div className="flex items-center gap-2 shrink-0">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <span className="mono text-xs font-bold text-primary">{String(i + 1).padStart(2, "0")}</span>
-                    </div>
-                    <span className="mono text-sm font-medium text-foreground">{f.step}</span>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <span className="mono text-xs font-bold text-primary">{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-start gap-2 mb-2">
-                      <AlertTriangle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                      <p className="text-sm text-foreground/90">{f.leak}</p>
-                    </div>
-                    <p className="mono text-sm font-bold text-primary">{f.impact}</p>
-                  </div>
+                  <span className="mono text-sm font-medium text-foreground">{f.step}</span>
                 </div>
+                <div className="flex items-start gap-2 mb-2">
+                  <AlertTriangle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                  <p className="text-sm text-foreground/90">{f.leak}</p>
+                </div>
+                <p className="mono text-sm font-bold text-primary">{f.impact}</p>
               </div>
             </ScrollReveal>
           ))}
