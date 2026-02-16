@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import GoldParticles from "@/components/GoldParticles";
 
 import RecognitionStrip from "@/components/sections/RecognitionStrip";
@@ -19,6 +20,17 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 const WA_LINK = "https://wa.me/REPLACE_WITH_NUMBER?text=Hey%20I%20want%20to%20check%20if%20leaks%20exist%20Can%20we%20do%20the%2015%20minute%20fit%20check";
 
 const Index = () => {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      setShowTop(scrollPercent > 0.3);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <AnnouncementBar />
@@ -57,7 +69,7 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="btn-gold-fill inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg transition-transform duration-200"
           >
-            Check if leaks exist in your journey <ArrowRight className="w-5 h-5" />
+            Check if a leak exists <ArrowRight className="w-5 h-5" />
           </motion.a>
 
           <motion.p
@@ -69,16 +81,6 @@ const Index = () => {
             Takes 15 minutes. If we cannot identify at least three revenue impacting issues, you do not proceed.
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.85 }}
-            className="text-muted-foreground text-sm mt-6 max-w-xl mx-auto leading-relaxed"
-          >
-            We detect leaks from observable behaviour patterns across the journey.
-            <br />
-            No internal access needed for the first diagnosis.
-          </motion.p>
         </div>
       </section>
 
@@ -119,6 +121,21 @@ const Index = () => {
           Revenue Infrastructure Audit · Leak Detection and Repair
         </div>
       </footer>
+
+      <AnimatePresence>
+        {showTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            aria-label="Back to top"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
