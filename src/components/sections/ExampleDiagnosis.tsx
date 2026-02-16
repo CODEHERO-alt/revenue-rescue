@@ -108,11 +108,13 @@ const ExampleDiagnosis = () => {
                     </div>
                     <span className="mono text-sm font-medium text-foreground">{f.step}</span>
                   </div>
-                  <div className="flex items-start gap-2 flex-1">
-                    <AlertTriangle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                    <p className="text-sm text-foreground/90">{f.leak}</p>
+                  <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                    <div className="flex items-start gap-2 flex-1">
+                      <AlertTriangle className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                      <p className="text-sm text-foreground/90">{f.leak}</p>
+                    </div>
+                    <p className="mono text-sm font-bold text-primary shrink-0">{f.impact}</p>
                   </div>
-                  <p className="mono text-sm font-bold text-primary shrink-0 sm:text-right sm:w-[240px]">{f.impact}</p>
                 </div>
               </div>
             </ScrollReveal>
