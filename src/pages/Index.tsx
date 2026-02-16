@@ -57,7 +57,7 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.35 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Most businesses already have demand. People click, sign up, browse or start. But value never becomes obvious fast enough, so revenue leaks through silent drop offs across the journey.
+            Most businesses already have demand. People click, sign up, browse or start But value never becomes obvious fast enough, so revenue leaks through silent drop offs across the journey.
           </motion.p>
 
           <motion.a
@@ -78,7 +78,7 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-muted-foreground text-sm mt-4"
           >
-            Takes 15 minutes. If we cannot identify at least three revenue impacting issues, you do not proceed.
+            Takes 15 minutes and if we cannot identify at least three revenue impacting issues, you do not pay a penny.
           </motion.p>
 
         </div>
