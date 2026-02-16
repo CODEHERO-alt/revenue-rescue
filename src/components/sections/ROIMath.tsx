@@ -32,7 +32,7 @@ const ROIMath = () => {
                 <p className="text-muted-foreground text-sm mb-2">Monthly revenue</p>
                 <p className="text-2xl font-black text-foreground mb-4">{tier.revenue}</p>
                 <p className="text-muted-foreground text-sm mb-1">Typical leak range</p>
-                <p className="text-xl font-bold text-primary">{tier.leakLow} – {tier.leakHigh}</p>
+                <p className="text-xl font-bold text-primary">{tier.leakLow}, {tier.leakHigh}</p>
                 <p className="text-muted-foreground text-xs mt-1">per month</p>
               </div>
             </ScrollReveal>
@@ -61,7 +61,7 @@ const ROIMath = () => {
                 >
                   <span className="text-muted-foreground text-sm">Estimated leak:</span>
                   <span className="mono text-lg font-bold text-primary">
-                    ${leakLow.toLocaleString()} – ${leakHigh.toLocaleString()}
+                    ${leakLow.toLocaleString()}, ${leakHigh.toLocaleString()}
                   </span>
                   <span className="text-muted-foreground text-xs">/mo</span>
                 </motion.div>

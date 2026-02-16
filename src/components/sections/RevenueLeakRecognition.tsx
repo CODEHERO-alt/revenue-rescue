@@ -22,7 +22,7 @@ const leaks = [
   {
     symptom: "Returning users restart onboarding each session",
     cause: "Session or state persistence failure",
-    impact: "Repeat visitors treated as new — trust lost",
+    impact: "Repeat visitors treated as new, trust lost",
   },
   {
     symptom: "Trial users activate but do not adopt core feature",
@@ -32,7 +32,7 @@ const leaks = [
   {
     symptom: "Checkout silently fails and users leave",
     cause: "Payment intent error swallowed on client side",
-    impact: "Lost buyers every day — undetected",
+    impact: "Lost buyers every day, undetected",
   },
   {
     symptom: "Users open docs and never come back to product",

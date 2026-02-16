@@ -20,7 +20,7 @@ const findings = [
   },
   {
     step: "Trial → Conversion",
-    leak: "Upgrade prompt appears once and never resurfaces. No usage-based triggers.",
+    leak: "Upgrade prompt appears once and never resurfaces. No usage based triggers.",
     impact: "~40% of qualified users never see pricing again",
   },
 ];
@@ -31,10 +31,10 @@ const ExampleDiagnosis = () => (
       <ScrollReveal>
         <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">EXAMPLE DIAGNOSIS</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-          A real teardown. Anonymized.
+          A real teardown example:
         </h2>
         <p className="text-muted-foreground text-lg mb-12">
-          SaaS product. $40k/month revenue. Four leaks identified in the first 20 minutes.
+          SaaS product doing $40k/month revenue. Four leaks identified by us in the first 20 minutes.
         </p>
       </ScrollReveal>
 
@@ -68,7 +68,7 @@ const ExampleDiagnosis = () => (
             <ArrowRight className="w-4 h-4 text-primary" />
             <span className="font-bold text-sm">Combined estimated revenue impact</span>
           </div>
-          <p className="mono text-2xl font-black text-primary">$14k – $22k/month</p>
+          <p className="mono text-2xl font-black text-primary">$14k, $22k/month</p>
           <p className="text-muted-foreground text-sm mt-1">Total repair time: 11 hours of developer work.</p>
         </div>
       </ScrollReveal>
