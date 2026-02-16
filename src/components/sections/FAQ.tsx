@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     q: "Why not just use analytics tools like GA4 or Mixpanel?",
-    a: "Analytics tools show you what happened. They don't tell you what should have happened. We isolate the gap between user intent and user action — then quantify the revenue sitting in that gap.",
+    a: "Analytics tools show you what happened. They don't tell you what should have happened. We isolate the gap between user intent and user action, then quantify the revenue sitting in that gap.",
   },
   {
     q: "What if you don't find anything significant?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "How is this different from a CRO agency?",
-    a: "CRO agencies run A/B tests on surface-level elements. We detect structural leaks in your revenue infrastructure — broken flows, silent failures, missing activation steps. Different problem, different method.",
+    a: "CRO agencies run A/B tests on surface-level elements. We detect structural leaks in your revenue infrastructure, broken flows, silent failures, missing activation steps. Different problem, different method.",
   },
   {
     q: "What do you need access to?",
@@ -35,7 +35,7 @@ const FAQ = () => (
       <ScrollReveal>
         <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">QUESTIONS</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">
-          Common objections. Direct answers.
+          Common objections, Direct answers.
         </h2>
       </ScrollReveal>
 
