@@ -13,8 +13,13 @@ const Guarantee = () => (
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-4">
             If we cannot identify at least three revenue impacting issues, you do not proceed.
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
+          <p className="text-muted-foreground leading-relaxed text-sm mb-4">
             If your journey is already clean, we tell you and you owe nothing.
+          </p>
+          <p className="text-muted-foreground leading-relaxed text-sm border-t border-border pt-4">
+            We detect leaks from observable behaviour patterns across the journey.
+            <br />
+            No internal access needed for the first diagnosis.
           </p>
         </div>
       </ScrollReveal>
