@@ -2,18 +2,18 @@ import { Check, X } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const fitFor = [
-  "Growing SaaS with active users",
-  "Products already acquiring traffic",
-  "DTC brands running Meta ads",
-  "Entrepreneurs managing their own Meta campaigns",
-  "Teams that suspect they lose more than they realise",
+  "Products with real traffic and real intent",
+  "Businesses with visitors or users but unclear drop offs",
+  "Teams seeing signups, clicks or carts without enough purchases",
+  "Founders who suspect revenue loss but cannot isolate the cause",
+  "Any offer where one repair could pay for the audit",
 ];
 
 const notFor = [
-  "Pre-launch startups",
-  "No users yet",
-  "Content sites",
-  "Hobby projects or side hustles",
+  "Pre launch projects with no traffic",
+  "Businesses with no measurable journey yet",
+  "Teams unwilling to change product or funnel mechanics",
+  "Anyone looking for ads management or generic marketing",
 ];
 
 const WhoNotFor = () => (

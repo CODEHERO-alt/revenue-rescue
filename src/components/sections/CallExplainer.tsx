@@ -1,10 +1,12 @@
 import { ArrowRight, Clock, MessageSquare, Search } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
+const WA_LINK = "https://wa.me/REPLACE_WITH_NUMBER?text=Hey%20I%20want%20to%20check%20if%20leaks%20exist%20Can%20we%20do%20the%2015%20minute%20fit%20check";
+
 const steps = [
-  { icon: Clock, title: "15-minute fit check", desc: "We verify your company matches the audit criteria." },
-  { icon: MessageSquare, title: "No pitch", desc: "We ask about your stack, your traffic, and your conversion points." },
-  { icon: Search, title: "We confirm leaks exist", desc: "If we cannot see signals of revenue leakage, you leave with clarity." },
+  { icon: Clock, title: "15 minute fit check", desc: "We confirm you match the criteria and that a measurable journey exists." },
+  { icon: MessageSquare, title: "No pitch", desc: "We ask about traffic, intent and your key conversion points." },
+  { icon: Search, title: "We confirm leaks exist", desc: "If we cannot see clear leakage signals, you leave with clarity." },
 ];
 
 const CallExplainer = () => (
@@ -36,12 +38,12 @@ const CallExplainer = () => (
       <ScrollReveal delay={0.4}>
         <div className="text-center">
           <a
-            href="https://wa.me/your-number"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold-fill inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg transition-transform duration-200"
           >
-            Check if leaks exist <ArrowRight className="w-5 h-5" />
+            Check if leaks exist in your journey <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </ScrollReveal>
