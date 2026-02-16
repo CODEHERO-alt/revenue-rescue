@@ -57,7 +57,7 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.35 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Most businesses already have demand. People click, sign up, browse or start But value never becomes obvious fast enough, so revenue leaks through silent drop offs across the journey.
+            Most businesses already have demand. People click, sign up, browse or start, But value never becomes obvious fast enough, so revenue leaks through silent drop offs across the journey.
           </motion.p>
 
           <motion.a
