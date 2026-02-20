@@ -44,7 +44,7 @@ const FAQ = () => (
             rel="noopener noreferrer"
             className="btn-gold-fill inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-bold transition-transform duration-200"
           >
-            Book the fit check <ArrowRight className="w-4 h-4" />
+            Book the free leak check <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </ScrollReveal>
