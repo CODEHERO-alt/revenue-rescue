@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   Accordion,
@@ -29,9 +30,25 @@ const faqs = [
   },
 ];
 
+const CALENDLY_LINK = "https://calendly.com/pehchaanmedia/30min";
+
 const FAQ = () => (
   <section className="py-20 px-6 bg-card">
     <div className="max-w-3xl mx-auto">
+      <ScrollReveal>
+        <div className="mb-10 text-center py-8 px-6 rounded-2xl border border-border bg-background">
+          <p className="text-lg sm:text-xl font-semibold mb-4">Browsed the site? Let's see if a leak exists.</p>
+          <a
+            href={CALENDLY_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold-fill inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-bold transition-transform duration-200"
+          >
+            Book the fit check <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </ScrollReveal>
+
       <ScrollReveal>
         <p className="mono text-primary text-sm font-medium mb-4 tracking-wider">QUESTIONS</p>
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-8">
