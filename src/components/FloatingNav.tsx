@@ -32,7 +32,7 @@ const FloatingNav = () => {
             Revenue Audit
           </span>
           <a
-            href="https://wa.me/your-number"
+            href="https://calendly.com/pehchaanmedia/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold-fill inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold transition-transform whitespace-nowrap"
