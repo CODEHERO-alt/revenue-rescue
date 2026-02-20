@@ -1,7 +1,7 @@
 import { ArrowRight, Clock, MessageSquare, Search } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const WA_LINK = "https://wa.me/REPLACE_WITH_NUMBER?text=Hey%20I%20want%20to%20check%20if%20leaks%20exist%20Can%20we%20do%20the%2015%20minute%20fit%20check";
+const WA_LINK = "https://calendly.com/pehchaanmedia/30min";
 
 const steps = [
   { icon: Clock, title: "15 minute fit check", desc: "We confirm you match the criteria and that a measurable journey exists." },

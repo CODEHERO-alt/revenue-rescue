@@ -17,7 +17,7 @@ import FAQ from "@/components/sections/FAQ";
 import FloatingNav from "@/components/FloatingNav";
 import AnnouncementBar from "@/components/AnnouncementBar";
 
-const WA_LINK = "https://wa.me/REPLACE_WITH_NUMBER?text=Hey%20I%20want%20to%20check%20if%20leaks%20exist%20Can%20we%20do%20the%2015%20minute%20fit%20check";
+const WA_LINK = "https://calendly.com/pehchaanmedia/30min";
 
 const Index = () => {
   const [showTop, setShowTop] = useState(false);
